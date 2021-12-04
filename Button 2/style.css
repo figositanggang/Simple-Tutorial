@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+* {
+    font-family: 'Poppins'
+}
+
+body {
+    background: rgb(31, 34, 37);
+}
+
+button, button > *{
+    transition: all .25s;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+}
+
+#container-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50em;
+    height: 30em;
+    /* background: rgb(31, 43, 56); */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+#container-button button {
+    padding: .75em 0.5em;
+    font-weight: bold;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgb(12, 54, 94), rgb(33, 135, 230));
+    border: none;
+    border: 1px solid rgb(12, 54, 94);
+    position: relative;
+    width: 10em;
+    height: 3em;
+}
+
+#container-button button span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+#container-button button span.active{
+    animation: gerak .1s infinite linear alternate;
+    -webkit-animation: gerak .1s infinite linear alternate;
+}
+@keyframes gerak {
+    to {
+        transform: translate(-40%, -50%);
+        -webkit-transform: translate(-40%, -50%);
+        -moz-transform: translate(-40%, -50%);
+        -ms-transform: translate(-40%, -50%);
+        -o-transform: translate(-40%, -50%);
+}
+}
+
+#container-button button:hover{
+    border: 1px solid rgba(12, 54, 94, 0);
+    background: none;
+    text-shadow:
+    0 0 20px rgb(72, 255, 255),
+    0 0 30px rgba(72, 255, 255, 0.452);
+    color: cyan;
+}
+#container-button button:focus{
+    background: black;
+    color: cyan;
+    text-shadow:
+    0 0 20px rgb(72, 255, 255),
+    0 0 30px rgba(72, 255, 255, 0.452);
+}
